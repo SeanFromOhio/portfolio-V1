@@ -11,8 +11,19 @@ html, body {
     width: 100%;
 }
 
+#navbar-custom {
+    position:;
+}
+
 .border-solid {
     border: solid;
+}
+
+.flex-col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 /* Project Boxes Alignment */
