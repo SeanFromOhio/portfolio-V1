@@ -33,6 +33,14 @@ html, body {
     align-items: center;
 }
 
+#intro-bg {
+    background: url(/static/images/pexels-daniel-absi.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #f7f7f7;
+}
+
 /* Project Boxes Alignment */
 .project-row {
     display: flex;
@@ -44,9 +52,26 @@ html, body {
 
 .project-box {
     width: 40%;
-    background: #fbf7f0;
+    background: #f7f7f7;
 }
 
+.project-text {
+    height: 100%;
+    width: 60%;
+}
+
+.project-pic {
+    height: 100%;
+    width: 40%;
+    background: yellow;
+}
+
+#pic-wxmusic {
+    background: url(/static/images/portfolio_project_wxmusic.png);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 /* ---------------------- */
 
 .footer {
