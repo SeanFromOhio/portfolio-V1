@@ -66,12 +66,20 @@ html, body {
     background: yellow;
 }
 
+#pic-swerl {
+    background: url(/static/images/portfolio_project_swerl.png);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 #pic-wxmusic {
     background: url(/static/images/portfolio_project_wxmusic.png);
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
 }
+
 /* ---------------------- */
 
 .footer {
