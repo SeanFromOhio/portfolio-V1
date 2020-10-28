@@ -4,7 +4,8 @@ html, body {
     padding: 0px;
     margin: 0px;
     height: 100%;
-    background: #292b2c;
+    background: #292b2c; /* ORIGINAL DARK GREY */
+    /* background: #484b4d; LIGHTER GREY */
     color: white;
     scroll-behavior: smooth;
 }
@@ -37,12 +38,32 @@ html, body {
     align-items: center;
 }
 
+.flex-col-just {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
 #intro-bg {
     background: url(/static/images/pexels-daniel-absi.jpg);
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
     color: #f7f7f7;
+    height: 100%; /* Fallback */
+    height: calc(100% - 56px);
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+
+#intro-description-text {
+    margin-left: 25%;
+    background: ;
+    color: white;
+    padding: 10px;
+    border-radius: 40px;
+    margin-right: 5%;
 }
 
 /* Project Boxes Alignment */
