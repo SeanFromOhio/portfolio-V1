@@ -2,82 +2,135 @@
 
 {% block content %}
 
-<div id="intro-bg" class="border-solid full-screen text-center flex-col">
-    <h1>Hello, I'm Sean!</h1>
-    <p></p>
+<div id="intro-bg" class="full-screen" style="display: flex;">
+    <div style="width: 45%; display: flex; justify-content: center; flex-direction: column;">
+        <h1 style="font-size: 1000%;">Hello,</h1>
+        <h1 style="font-size: 1000%;">I'm Sean!</h1>
+    </div>
+
+    <div style="width: 10%; display: flex; align-items: center; flex-direction: column;">
+        <div class="shape-triangle"></div>
+        <a href="#projects-page" type="button" class="btn" style="position: absolute; bottom: -55px;">
+            <i class="fas fa-hand-point-down fa-lg" style="color: white;"></i>
+        </a>
+    </div>
+
+    <div style="width: 45%; display: flex; justify-content: center; flex-direction: column;">
+        <h2 class="text-center" style="margin-left: 25%; background: white; color: #292b2c; padding: 10px; border-radius: 40px; margin-right: 5%;">
+            A recent graduate with a new found aspiration of becoming a software developer, and
+            an eagerness to continue to learn more. I believe the overcoming of challenges is the best way to do so.
+        </h2>
+    </div>
+
 </div>
 
-<div id="projects-page" class="border-solid full-screen text-center">
+<div id="projects-page" class="full-screen text-center">
+    <!-- Row 1 -->
     <div class="project-row">
         <!-- PROJECT 1 -->
-        <div class="border-solid project-box flex-center">
-            <div class="project-text flex-col">
-                <div>
-                    <h3 style="font-type: cambria">Sorting Algo Visualizer</h3>
-                    <p style="margin: 0;"><b><u>Description:</u></b></p>
+        <div class="gradient-border project-box flex-center flip-card">
+            <div class="flex-col flip-card-inner">
+                <!-- Front side of card -->
+                <div class="flip-card-front flex-center" id="pic-sorting_algo">
+                    <div class="pic-overlay">
+                        <i class="fas fa-mouse-pointer" style="color: white;"></i>
+                    </div>
+<!--                    <button type="button" class="btn" style="width: 100%; height: 100%;"-->
+<!--                        data-toggle="modal" data-target="#video_demo_modal">-->
+<!--                        <i class="fas fa-play fa-lg text-dark"></i>-->
+<!--                    </button>-->
+                </div>
+
+                <!-- Back side of card -->
+                <div class="flip-card-back">
+                    <!-- Text -->
+                    <h2><b>Sorting Algo Visualizer</b></h2>
+                    <h4 style="margin: 0;"><u>Description:</u></h4>
                     <p>
                         A helpful educational tool to see the inner workings of the four most iconic sorting algorithms.
                     </p>
 
-                    <p style="margin: 0;"><b><u>Technologies:</u></b></p>
+                    <h4 style="margin: 0;"><u>Technologies:</u></h4>
                     <p>Python, Tkinter, Ttk (styling)</p>
+
+                    <!-- Buttons -->
                     <div>
-                        <a class="btn btn-dark custom-button" target="_blank"
-                           href="#">Video Demo</a>
-                        <a class="btn btn-dark custom-button" target="_blank"
-                           href="https://github.com/SeanFromOhio/Tkinter-Sorting-Algo_Visualizer">Code</a>
+                        <button type="button" class="btn btn-light custom-button"
+                                data-toggle="modal" data-target="#video_demo_modal">
+                            Video Demo
+                        </button>
+                        <a class="btn btn-light custom-button" target="_blank"
+                           href="https://github.com/SeanFromOhio/Tkinter-Sorting-Algo_Visualizer"> Code
+                        </a>
                     </div>
+
                 </div>
-            </div>
-            <div class="project-pic" id="project2" style="height: 100%;">
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#video_demo_modal">
-                    <i class="fas fa-play"></i>
-                </button>
             </div>
         </div>
     </div>
 
+    <!-- Row 2 -->
     <div class="project-row">
         <!-- PROJECT 2 -->
-        <div class="border-solid project-box flex-center" style="margin-right: 4%;">
-            <div class="project-text flex-col">
-                <div>
-                    <h3 style="font-type: cambria">Swerl Expense Tracker</h3>
-                    <p style="margin: 0;"><b><u>Description:</u></b></p>
-                    <p>Expense tracking made easy, with a variety of tools to take control of your finances.</p>
-
-                    <p style="margin: 0;"><b><u>Technologies:</u></b></p>
-                    <p>Python, Django, Javascript (small scripts), HTML5, CSS3, Plotly, Pandas (lib)</p>
-                    <div>
-                        <a class="btn btn-dark custom-button" target="_blank"
-                           href="https://swerl.herokuapp.com/">Live Demo</a>
-                        <a class="btn btn-dark custom-button" target="_blank"
-                           href="https://github.com/SeanFromOhio/Swerl-Expense-Tracker">Code</a>
+        <div class="gradient-border project-box flex-center flip-card" style="margin-right: 4%;">
+            <div class="flex-col flip-card-inner">
+                <!-- Front side of card -->
+                <div class="flip-card-front flex-center" id="pic-swerl">
+                    <div class="pic-overlay">
+                        <i class="fas fa-mouse-pointer" style="color: white;"></i>
                     </div>
                 </div>
-            </div>
-            <div class="project-pic" id="pic-swerl" style="height: 100%;" >
+
+                <!-- Back side of card -->
+                <div class="flip-card-back">
+                    <!-- Text -->
+                    <h2><b>Swerl Expense Tracker</b></h2>
+                    <h4 style="margin: 0;"><u>Description:</u></h4>
+                    <p>Expense tracking made easy, with a variety of tools to take control of your finances.</p>
+
+                    <h4 style="margin: 0;"><u>Technologies:</u></h4>
+                    <p>Python, Django, Javascript (small scripts), HTML5, CSS3, Plotly, Pandas (lib)</p>
+
+                    <!-- Buttons -->
+                    <div>
+                        <a class="btn btn-light custom-button" target="_blank"
+                           href="https://swerl.herokuapp.com/">Live Demo</a>
+                        <a class="btn btn-light custom-button" target="_blank"
+                           href="https://github.com/SeanFromOhio/Swerl-Expense-Tracker">Code</a>
+                    </div>
+
+                </div>
             </div>
         </div>
         <!-- PROJECT 3 -->
-        <div class="border-solid project-box flex-center">
-            <div class="project-text flex-col">
-                <div>
-                    <h3 style="font-type: cambria">WeatherMusic</h3>
-                    <p style="margin: 0;"><b><u>Description:</u></b></p>
-                    <p>A fun way of combining current local weather conditions with music.</p>
-
-                    <p style="margin: 0;"><b><u>Technologies:</u></b></p>
-                    <p>Python, Flask, Javascript (+ AJAX), HTML5, CSS3, Google APIs, NWS API</p>
-                    <div>
-                        <a class="btn btn-dark custom-button" target="_blank"
-                           href="https://weather-music-flask.herokuapp.com/">Live Demo</a>
-                        <a class="btn btn-dark custom-button" target="_blank"
-                           href="https://github.com/SeanFromOhio/weather-music-flask">Code</a>
+        <div class="gradient-border project-box flex-center flip-card">
+            <div class="flex-col flip-card-inner">
+                <!-- Front side of card -->
+                <div class="flip-card-front flex-center" id="pic-wxmusic">
+                    <div class="pic-overlay">
+                        <i class="fas fa-mouse-pointer" style="color: white;"></i>
                     </div>
                 </div>
-            </div>
-            <div class="project-pic" id="pic-wxmusic" style="height: 100%;" >
+
+                <!-- Back side of card -->
+                <div class="flip-card-back">
+                    <!-- Text -->
+                    <h2><b>WeatherMusic</b></h2>
+                    <h4 style="margin: 0;"><u>Description:</u></h4>
+                    <p>A fun way of combining current local weather conditions with music.</p>
+
+                    <h4 style="margin: 0;"><u>Technologies:</u></h4>
+                    <p>Python, Flask, Javascript (+ AJAX), HTML5, CSS3, Google APIs, NWS API</p>
+
+                    <!-- Buttons -->
+                    <div>
+                        <a class="btn btn-light custom-button" target="_blank"
+                           href="https://weather-music-flask.herokuapp.com/">Live Demo</a>
+                        <a class="btn btn-light custom-button" target="_blank"
+                           href="https://github.com/SeanFromOhio/weather-music-flask">Code</a>
+                    </div>
+
+                </div>
             </div>
         </div>
     </div>
@@ -89,7 +142,7 @@
     <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="SA_video_modal">Sorting Algorithm Video Demo</h5>
+                <h5 class="modal-title" id="SA_video_modal"><b>Sorting Algorithm Video Demo</b></h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -97,10 +150,7 @@
             <!-- Video -->
             <div class="modal-body">
                 <div class="flex-center">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/v2BTLCt6xOI" frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;
-                                 picture-in-picture"
-                                allowfullscreen>
+                    <iframe>
                     </iframe>
                 </div>
             </div>

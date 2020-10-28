@@ -1,8 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:200');
+
 html, body {
     padding: 0px;
     margin: 0px;
     height: 100%;
-    background: #d9e4dd;
+    background: #292b2c;
+    color: white;
+    scroll-behavior: smooth;
 }
 
 .full-screen {
@@ -53,6 +57,8 @@ html, body {
 .project-box {
     width: 40%;
     background: #f7f7f7;
+    font-family: Raleway;
+    color: white;
 }
 
 .project-text {
@@ -64,6 +70,23 @@ html, body {
     height: 100%;
     width: 40%;
     background: yellow;
+}
+
+.pic-overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    background: rgba(0, 0, 0, 0.7);
+    width: 50px;
+    height: 50px;
+}
+
+#pic-sorting_algo {
+    background: url(/static/images/portfolio_project_sorting_algo.png);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 #pic-swerl {
@@ -92,3 +115,98 @@ html, body {
     border-radius: 20px;
 }
 
+.bg-black {
+    background: #292b2c;
+}
+
+.shape-triangle {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 50px solid #292b2c;
+    margin-top: auto;
+}
+
+/* Border gradient animation */
+.gradient-border {
+  --borderWidth: 5px;
+  background: #1D1F20;
+  position: relative;
+  border-radius: var(--borderWidth);
+}
+.gradient-border:after {
+  content: '';
+  position: absolute;
+  top: calc(-1 * var(--borderWidth));
+  left: calc(-1 * var(--borderWidth));
+  height: calc(100% + var(--borderWidth) * 2);
+  width: calc(100% + var(--borderWidth) * 2);
+  background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+  border-radius: calc(2 * var(--borderWidth));
+  z-index: -1;
+  animation: animatedgradient 3s ease alternate infinite;
+  background-size: 300% 300%;
+}
+
+
+@keyframes animatedgradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+/* Flip Card Effect on Hover */
+.flip-card {
+  background-color: transparent;
+  width: 40%;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #bbb;
+  border-radius: 10px;
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: black;
+  font-family: Raleway;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  transform: rotateY(180deg);
+}
