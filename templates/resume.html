@@ -3,14 +3,16 @@
 {% block title %} Resume {% endblock title %}
 
 {% block content %}
-<div class="full-screen flex-col" style="padding: 2%; height: 165%;">
-    <h2>Resume // <a class="btn btn-light custom-button"
+<div class="full-screen flex-col font-Raleway" style="padding: 2%; height: 165%;">
+    <h2><b>Resume // </b>
+        <a class="btn btn-light custom-button"
                      href="{{ url_for('static', filename='doc/Technical Interview V1.0.pdf') }}"
-                     target="_blank">Download Resume</a>
+                     target="_blank">Download Resume
+        </a>
     </h2>
     <iframe
             src="https://docs.google.com/document/d/e/2PACX-1vRAxb2so_Vgh_HdBMbE7O0aVvolVvluJ9s9oXE3Wf0peJFNm0O3se8uD6NDtv2iFtjQANSiwhBk43ZH/pub?embedded=true"
-            style="width: 61%; height: 87%;"
+            style="width: 61%; height: 87%; border: 0;"
     >
     </iframe>
 </div>

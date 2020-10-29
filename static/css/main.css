@@ -10,6 +10,10 @@ html, body {
     scroll-behavior: smooth;
 }
 
+.font-Raleway {
+    font-family: Raleway;
+}
+
 .full-screen {
     padding: 0px;
     margin: 0px;
