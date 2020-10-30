@@ -4,6 +4,14 @@
 
 {% block content %}
 <div class="full-screen flex-col font-Raleway">
+    <div class="container">
+        {% for message in get_flashed_messages() %}
+        <div class="alert alert-light">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <i class="fas fa-exclamation-triangle"></i> {{ message }}
+        </div>
+        {% endfor %}
+    </div>
     <div class="flex-col" style="width: 50%;">
         <h1><b>Looking forward to hearing from you</b></h1>
         <br>

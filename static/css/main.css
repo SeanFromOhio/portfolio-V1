@@ -128,6 +128,11 @@ html, body {
     background-repeat: no-repeat;
 }
 
+#SA_video_modal {
+    font-family: Raleway;
+    color: black;
+}
+
 /* ---------------------- */
 
 .footer {

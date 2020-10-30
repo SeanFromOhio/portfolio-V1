@@ -1,9 +1,10 @@
-from flask import Flask, render_template, request, redirect
+from flask import Flask, flash, render_template, request, redirect
 from flask_mail import Mail, Message
 import gunicorn
 import os
 
 app = Flask(__name__)
+app.secret_key = os.environ.get("flask_key")
 app.config.update(
     # Email Settings
     MAIL_SERVER="smtp.gmail.com",
@@ -43,6 +44,7 @@ def contact():
             recipients=["seanohioroberts@gmail.com"],
         )
         mail.send(msg)
+        flash("Message was sent! Thanks for reaching out to me.")
         return redirect("/contact")
     else:
         return render_template("contact.html")

@@ -161,20 +161,25 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="SA_video_modal"><b>Sorting Algorithm Video Demo</b></h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"
+                    onclick="document.getElementById('SA_video').pause();">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <!-- Video -->
-            <div class="modal-body">
+            <div class="modal-body" style="background: black;">
                 <div class="flex-center">
-                    <iframe>
-                    </iframe>
+                    <video controls="controls" width="600" height="400" autoplay style="border: 0;" id="SA_video"
+                           src="{{ url_for('static', filename='images/sorting_algo_demo.mp4') }}">
+                    </video>
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <a type="button" class="btn btn-primary" target="_blank"
+                <button type="button" class="btn btn-secondary custom-button font-Raleway" data-dismiss="modal"
+                    onclick="document.getElementById('SA_video').pause();">
+                    Close
+                </button>
+                <a type="button" class="btn btn-primary custom-button font-Raleway" target="_blank"
                    href="https://github.com/SeanFromOhio/Tkinter-Sorting-Algo_Visualizer"> Code
                 </a>
             </div>
