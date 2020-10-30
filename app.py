@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, redirect
 from flask_mail import Mail, Message
 import gunicorn
+import os
 
 app = Flask(__name__)
 app.config.update(
@@ -9,8 +10,8 @@ app.config.update(
     MAIL_PORT=465,
     MAIL_USE_SSL=True,
     # SAVE AS AN ENVIRONMENTAL VARIABLE SO NO ONE STEAL THIS INFO!!!
-    MAIL_USERNAME="seanohioroberts@gmail.com",
-    MAIL_PASSWORD="Qazwsxujm77"
+    MAIL_USERNAME=os.environ.get("MAIL_USERNAME"),
+    MAIL_PASSWORD=os.environ.get("MAIL_PASSWORD")
 )
 mail = Mail(app)
 
