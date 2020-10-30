@@ -20,6 +20,11 @@
     <!-- Personal CSS -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
 
+    <!-- Site favicon -->
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/portfolio_project_favicon.ico') }}"
+          type="image/x-icon"
+    >
+
     <title>{% block title%} Home {% endblock title%}</title>
 </head>
 
