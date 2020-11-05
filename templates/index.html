@@ -2,7 +2,7 @@
 
 {% block content %}
 
-<div id="intro-bg" style="display: flex;">
+<div id="intro-bg">
     <div class="flex-col-just text-center" style="width: 45%; text-align: right;">
         <h1 style="font-size: 11vmax; text-align: right;">Hello,</h1>
         <h1 style="font-size: 11vmax; text-align: right;">I'm Sean!</h1>
@@ -10,7 +10,11 @@
 
     <div style="width: 10%; display: flex; align-items: center; flex-direction: column;">
         <div class="shape-triangle"></div>
-        <a href="#projects-page" type="button" class="btn bg-transparent" style="position: absolute; bottom: 1px;">
+            <i id="mobile-pointer" class="fas fa-hand-point-down fa-lg"
+               style="color: white; position: absolute; bottom: 13px;">
+            </i>
+        <a id="pointer" href="#projects-page" type="button" class="btn bg-transparent"
+           style="position: absolute; bottom: 1px;">
             <i class="fas fa-hand-point-down fa-lg" style="color: white;"></i>
         </a>
     </div>
@@ -34,6 +38,43 @@
     </div>
 </div>
 
+<!--  < 950px landing page format -->
+<div id="mobile-intro-bg">
+    <div class="flex-center">
+        <h1 class="text-center" style="font-size: 11vmax;">Hello, I'm Sean!</h1>
+    </div>
+
+    <div class="flex-center">
+        <div class="card flex-col" style="width: 50%;">
+            <img class="card-img-top" src="/static/images/rsz_portfolio_project_headshot.png"
+                 alt="headshot img" style="height: 50%; width: 50%; border-radius: 50%; margin-top: 10px;">
+            <div class="card-body flex-col" style="justify-content: space-between">
+                <h4 class="text-center font-Raleway" style="color: black; font-size: 3vmin;">
+                    A recent graduate from Columbus, Ohio with a newfound passion for software development.
+                </h4>
+                <p>
+                    <a href="https://github.com/SeanFromOhio" target="_blank" style="margin-right: 10px;">
+                        <i class="fab fa-github fa-lg" style="color: black;"></i></a>
+                    <a href="https://www.linkedin.com/in/sean-roberts-ohio95/" target="_blank">
+                        <i class="fab fa-linkedin fa-lg" style="color: black;"></i></a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div style="display: flex; align-items: center; flex-direction: column;">
+        <div class="shape-triangle" style="margin-top: auto;"></div>
+        <i id="mobile-pointer" class="fas fa-hand-point-down fa-lg"
+           style="color: white; position: absolute; bottom: 13px;">
+        </i>
+        <a id="pointer" href="#projects-page" type="button" class="btn bg-transparent"
+           style="position: absolute; bottom: 1px;">
+            <i class="fas fa-hand-point-down fa-lg" style="color: white;"></i>
+        </a>
+    </div>
+</div>
+
+<!-- Project Page -->
 <div id="projects-page" class="full-screen text-center">
     <!-- Row 1 -->
     <div class="project-row">

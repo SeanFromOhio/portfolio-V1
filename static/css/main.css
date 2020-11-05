@@ -79,6 +79,11 @@ h5 {
     width: 100%;
     padding: 0px;
     margin: 0px;
+    display: flex;
+}
+
+#mobile-intro-bg {
+    display: none;
 }
 
 #intro-description-text {
@@ -88,6 +93,14 @@ h5 {
     padding: 10px;
     border-radius: 40px;
     margin-right: ;
+}
+
+#pointer {
+    display: block;
+}
+
+#mobile-pointer {
+    display: none;
 }
 
 /* Project Boxes Alignment */
@@ -175,6 +188,14 @@ h5 {
 
 #mobile-resume {
     display: none;
+}
+
+
+#resume-bg {
+    background: url(/static/images/resume_pic.jpg);
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 /* ---------------------- */
@@ -294,22 +315,18 @@ h5 {
     #footer-box {
         margin-left: 0;
     }
-
-    #regular-resume {
-        display: none;
-    }
-
-    #mobile-resume {
-        padding: 2%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
 }
 
 @media all and (max-width: 600px) {
     /* Mobile Phones / Smaller Displays */
+    #pointer {
+        display: none;
+    }
+
+    #mobile-pointer {
+        display: block;
+    }
+
     #projects-page {
         display: none;
     }
@@ -331,5 +348,43 @@ h5 {
         background: #f7f7f7;
         font-family: Raleway;
         color: white;
+    }
+}
+
+/* Landing page media adjustments */
+@media all and (max-width: 950px) {
+    #intro-bg {
+        display: none;
+    }
+
+    #mobile-intro-bg {
+        background: url(/static/images/pexels-daniel-absi.jpg);
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        color: #f7f7f7;
+        height: 100%; /* Fallback */
+        height: calc(100% - 56px);
+        width: 100%;
+        padding: 0px;
+        margin: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+@media all and (max-width: 1100px) {
+    #regular-resume {
+        display: none;
+    }
+
+    #mobile-resume {
+        padding: 2%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
     }
 }
