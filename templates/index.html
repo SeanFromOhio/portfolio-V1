@@ -4,8 +4,8 @@
 
 <div id="intro-bg" style="display: flex;">
     <div class="flex-col-just text-center" style="width: 45%; text-align: right;">
-        <h1 style="font-size: 1000%; text-align: right;">Hello,</h1>
-        <h3 style="font-size: 1000%; text-align: right;">I'm Sean!</h3>
+        <h1 style="font-size: 11vmax; text-align: right;">Hello,</h1>
+        <h1 style="font-size: 11vmax; text-align: right;">I'm Sean!</h1>
     </div>
 
     <div style="width: 10%; display: flex; align-items: center; flex-direction: column;">
@@ -20,7 +20,7 @@
             <img class="card-img-top" src="/static/images/rsz_portfolio_project_headshot.png"
                  alt="headshot img" style="height: 50%; width: 50%; border-radius: 50%; margin-top: 10px;">
             <div class="card-body flex-col" style="justify-content: space-between">
-                <h4 class="text-center font-Raleway" style="color: black;">
+                <h4 class="text-center font-Raleway" style="color: black; font-size: 3vmin;">
                     A recent graduate from Columbus, Ohio with a newfound passion for software development.
                 </h4>
                 <p>
@@ -31,16 +31,14 @@
                 </p>
             </div>
         </div>
-
     </div>
-
 </div>
 
 <div id="projects-page" class="full-screen text-center">
     <!-- Row 1 -->
     <div class="project-row">
         <div class="project-box flex-center" style="margin-right: 4%; background: transparent;">
-            <h1 style="font-size: 450%; font-weight: bold; width: 100%; text-align: right;">
+            <h1 style="font-size: 6vmax; font-weight: bold; width: 100%; text-align: right;">
                 Highlighted Projects
             </h1>
         </div>
@@ -132,6 +130,126 @@
 
                 <!-- Back side of card -->
                 <div class="flip-card-back flex-col-just" style="justify-content: space-between;">
+                    <!-- Text -->
+                    <h2><b>WeatherMusic</b></h2>
+                    <h4 style="margin: 0;"><u>Description:</u></h4>
+                    <p>A fun way of combining local weather conditions with music.</p>
+
+                    <h4 style="margin: 0;"><u>Technologies:</u></h4>
+                    <p>Python, Flask, Javascript (+ AJAX), HTML5, CSS3, Google APIs, NWS API</p>
+
+                    <!-- Buttons -->
+                    <div>
+                        <a class="btn btn-light custom-button" target="_blank"
+                           href="https://weather-music-flask.herokuapp.com/">Live Demo</a>
+                        <a class="btn btn-light custom-button" target="_blank"
+                           href="https://github.com/SeanFromOhio/weather-music-flask">Code</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Mobile Projects Page -->
+<div id="mobile-projects-page" class="full-screen text-center">
+
+    <!-- Row 1 / Headline-->
+    <div class="project-row" style="height: 10%;">
+        <div class="project-box flex-center" style="background: transparent; width: 100%;">
+            <h1 style="font-weight: bold; width: 100%; text-align: center">
+                Highlighted Projects
+            </h1>
+        </div>
+    </div>
+
+    <!-- Row 2 / PROJECT 1 -->
+    <div class="project-row">
+        <div class="gradient-border project-box flex-center flip-card">
+            <div class="flex-col flip-card-inner">
+                <!-- Front side of card -->
+                <div class="flip-card-front flex-center" id="pic-sorting_algo">
+                    <div class="pic-overlay">
+                        <i class="fas fa-mouse-pointer" style="color: white;"></i>
+                    </div>
+                </div>
+
+                <!-- Back side of card -->
+                <div class="flip-card-back flex-col-just">
+                    <!-- Text -->
+                    <h2><b>Sorting Algo Visualizer</b></h2>
+                    <h4 style="margin: 0;"><u>Description:</u></h4>
+                    <p>
+                        A helpful educational tool to see the inner workings of the four most iconic sorting algorithms.
+                    </p>
+
+                    <h4 style="margin: 0;"><u>Technologies:</u></h4>
+                    <p>Python, Tkinter, Ttk (styling)</p>
+
+                    <!-- Buttons -->
+                    <div>
+                        <button type="button" class="btn btn-light custom-button"
+                                data-toggle="modal" data-target="#video_demo_modal">
+                            Video Demo
+                        </button>
+                        <a class="btn btn-light custom-button" target="_blank"
+                           href="https://github.com/SeanFromOhio/Tkinter-Sorting-Algo_Visualizer"> Code
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Row 3 / PROJECT 2 -->
+    <div class="project-row">
+        <div class="gradient-border project-box flex-center flip-card">
+            <div class="flex-col flip-card-inner">
+                <!-- Front side of card -->
+                <div class="flip-card-front flex-center" id="pic-swerl">
+                    <div class="pic-overlay">
+                        <i class="fas fa-mouse-pointer" style="color: white;"></i>
+                    </div>
+                </div>
+
+                <!-- Back side of card -->
+                <div class="flip-card-back flex-col-just">
+                    <!-- Text -->
+                    <h2><b>Swerl Expense Tracker</b></h2>
+                    <h4 style="margin: 0;"><u>Description:</u></h4>
+                    <p>Expense tracking made easy, with a variety of tools to take control of your finances.</p>
+
+                    <h4 style="margin: 0;"><u>Technologies:</u></h4>
+                    <p>Python, Django, Javascript (small scripts), HTML5, CSS3, Plotly, Pandas (lib)</p>
+
+                    <!-- Buttons -->
+                    <div>
+                        <a class="btn btn-light custom-button" target="_blank"
+                           href="https://swerl.herokuapp.com/">Live Demo</a>
+                        <a class="btn btn-light custom-button" target="_blank"
+                           href="https://github.com/SeanFromOhio/Swerl-Expense-Tracker">Code</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Row 4 / PROJECT 3 -->
+    <div class="project-row">
+        <div class="gradient-border project-box flex-center flip-card">
+            <div class="flex-col flip-card-inner">
+                <!-- Front side of card -->
+                <div class="flip-card-front flex-center" id="pic-wxmusic">
+                    <div class="pic-overlay">
+                        <i class="fas fa-mouse-pointer" style="color: white;"></i>
+                    </div>
+                </div>
+
+                <!-- Back side of card -->
+                <div class="flip-card-back flex-col-just">
                     <!-- Text -->
                     <h2><b>WeatherMusic</b></h2>
                     <h4 style="margin: 0;"><u>Description:</u></h4>

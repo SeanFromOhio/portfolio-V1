@@ -10,6 +10,22 @@ html, body {
     scroll-behavior: smooth;
 }
 
+p {
+    font-size: 2vmin;
+}
+
+h1 {
+  font-size: 5.9vw;
+}
+
+h2 {
+  font-size: 3.0vh;
+}
+
+h4 {
+    font-size: 2.618vw;
+}
+
 .font-Raleway {
     font-family: Raleway;
 }
@@ -97,6 +113,14 @@ html, body {
     background: yellow;
 }
 
+#projects-page {
+    display: block;
+}
+
+#mobile-projects-page {
+    display: none;
+}
+
 .pic-overlay {
     display: flex;
     justify-content: center;
@@ -135,10 +159,29 @@ html, body {
 
 /* ---------------------- */
 
+/* Resume Media Query Boxes */
+#regular-resume {
+    padding: 2%;
+    height: 165%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#mobile-resume {
+    display: none;
+}
+
+/* ---------------------- */
 .footer {
     width: 100%;
     height: 100px;
     color: #555555;
+}
+
+#footer-box {
+    margin-left: auto;
 }
 
 .custom-button {
@@ -239,4 +282,50 @@ html, body {
   padding: 10px;
   border-radius: 10px;
   transform: rotateY(180deg);
+}
+
+/* Media Queries */
+@media all and (max-width: 400px) {
+    /* Mobile Phones / Smaller Displays */
+    #footer-box {
+        margin-left: 0;
+    }
+
+    #regular-resume {
+        display: none;
+    }
+
+    #mobile-resume {
+        padding: 2%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+
+@media all and (max-width: 600px) {
+    /* Mobile Phones / Smaller Displays */
+    #projects-page {
+        display: none;
+    }
+
+    #mobile-projects-page {
+        display: block;
+    }
+
+    .project-row {
+        display: flex;
+        justify-content: center;
+        height: 30%;
+        width: 100%;
+        padding: 2%;
+    }
+
+    .project-box {
+        width: 80%;
+        background: #f7f7f7;
+        font-family: Raleway;
+        color: white;
+    }
 }
