@@ -191,8 +191,17 @@ h5 {
 }
 
 
-#resume-bg {
-    background: url(/static/images/resume_pic.jpg);
+#resume-bg1 {
+    background: url(/static/images/resume_pic1.jpg);
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    max-width: 100%;
+    max-height: auto;
+}
+
+#resume-bg2 {
+    background: url(/static/images/resume_pic2.jpg);
     background-position: center center;
     background-size: contain;
     background-repeat: no-repeat;
