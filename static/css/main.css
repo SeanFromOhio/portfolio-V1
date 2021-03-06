@@ -191,13 +191,16 @@ body #google-doc-container .google-doc {
   transform-origin: top left;
   transition: all 100ms ease-in-out !important;
 }
+
+/* This css causes an overflow on mobile...
 body #google-doc-container .google-doc:after {
   position: absolute;
   bottom: 0;
   width: 100%;
   height: 256px;
   content: "";
-}
+}*/
+
 body #google-doc-container .google-doc iframe {
   border: 0;
   width: 826px;
