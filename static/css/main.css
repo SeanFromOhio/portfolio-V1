@@ -177,19 +177,44 @@ h5 {
 /* ---------------------- */
 
 /* Resume Media Query Boxes */
+body #google-doc-container {
+  position: absolute;
+  left: 16px;
+  top: 0px;
+  right: 16px;
+  bottom: 0px;
+}
+body #google-doc-container .google-doc {
+  position: absolute;
+  width: 836px;
+  height: 1066px;
+  transform-origin: top left;
+  transition: all 100ms ease-in-out !important;
+}
+body #google-doc-container .google-doc:after {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 256px;
+  content: "";
+}
+body #google-doc-container .google-doc iframe {
+  border: 0;
+  width: 826px;
+  height: 1066px;
+}
+
 #regular-resume {
     padding: 2%;
-    height: 165%;
+    height: 100%;
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
-#mobile-resume {
-    display: none;
+#regular-resume h2 {
+  text-align: center;
 }
-
 
 #resume-bg1 {
     background: url(/static/images/resume_pic1.jpg);
@@ -255,7 +280,6 @@ h5 {
   animation: animatedgradient 3s ease alternate infinite;
   background-size: 300% 300%;
 }
-
 
 @keyframes animatedgradient {
 	0% {
@@ -381,19 +405,5 @@ h5 {
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-    }
-}
-
-@media all and (max-width: 1100px) {
-    #regular-resume {
-        display: none;
-    }
-
-    #mobile-resume {
-        padding: 2%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
     }
 }

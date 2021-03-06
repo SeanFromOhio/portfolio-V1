@@ -3,34 +3,59 @@
 {% block title %} Resume {% endblock title %}
 
 {% block content %}
-<div id="mobile-resume" class="full-screen font-Raleway" style="height: 200%;">
-    <h2><b>Resume // </b>
-        <a class="btn btn-light custom-button"
-           href="{{ url_for('static', filename='doc/Technical Resume V2.5.pdf') }}"
-           target="_blank">Download Resume
-        </a>
-    </h2>
-    <a class="btn" href="{{ url_for('static', filename='doc/Technical Resume V2.5.pdf') }}" target="_blank"
-        style="height: 90%; width:95%; overflow: scroll;">
-<!--        <div id="resume-bg1" style="height: 100%;"></div>-->
-<!--        <div id="resume-bg2" style="height: 100%;"></div>-->
-        <img src="{{ url_for('static', filename='images/resume_pic1.jpg') }}" style="max-width: 70%; max-height: auto;">
-        <img src="{{ url_for('static', filename='images/resume_pic2.jpg') }}" style="max-width: 70%; max-height: auto;">
-    </a>
-</div>
-
 <div id="regular-resume" class="full-screen font-Raleway">
     <h2><b>Resume // </b>
         <a class="btn btn-light custom-button"
-                     href="{{ url_for('static', filename='doc/Technical Resume V2.5.pdf') }}"
+                     href="{{ url_for('static', filename='doc/Technical Resume V2.6.pdf') }}"
                      target="_blank">Download Resume
         </a>
     </h2>
-    <iframe
-            src="https://docs.google.com/document/d/e/2PACX-1vRAxb2so_Vgh_HdBMbE7O0aVvolVvluJ9s9oXE3Wf0peJFNm0O3se8uD6NDtv2iFtjQANSiwhBk43ZH/pub?embedded=true"
-            style="min-width: 61%; height: 87%; border: 0;"
-    >
-    </iframe>
-
+    <div style="position: relative; height: 75%; width: 100%;">
+        <div id="google-doc-container">
+            <div class="google-doc">
+                <iframe
+                    src="https://docs.google.com/document/d/e/2PACX-1vRAxb2so_Vgh_HdBMbE7O0aVvolVvluJ9s9oXE3Wf0peJFNm0O3se8uD6NDtv2iFtjQANSiwhBk43ZH/pub?embedded=true"
+                >
+                </iframe>
+            </div>
+        </div>
+    </div>
 </div>
+
+<script>
+    var pageWidth, pageHeight;
+    var basePage = {
+      width: 826,
+      height: 1066,
+      scale: 1,
+      scaleX: 1,
+      scaleY: 1
+    };
+    $(function(){
+      var $page = $('.google-doc');
+      getPageSize();
+      scalePages($page, pageWidth, pageHeight);
+      //using underscore to delay resize method till finished resizing window
+      $(window).resize(_.debounce(function () {
+        getPageSize();
+        scalePages($page, pageWidth, pageHeight);
+      }, 150));
+    function getPageSize() {
+      pageHeight = $('#google-doc-container').height();
+      pageWidth = $('#google-doc-container').width();
+    }
+    function scalePages(page, maxWidth, maxHeight) {
+      var scaleX = 1, scaleY = 1;
+      scaleX = maxWidth / basePage.width;
+      scaleY = maxHeight / basePage.height;
+      basePage.scaleX = scaleX;
+      basePage.scaleY = scaleY;
+      basePage.scale = (scaleX > scaleY) ? scaleY : scaleX;
+      var newLeftPos = Math.abs(Math.floor(((basePage.width * basePage.scale) - maxWidth)/2));
+      var newTopPos = Math.abs(Math.floor(((basePage.height * basePage.scale) - maxHeight)/2));
+      page.attr('style', '-webkit-transform:scale(' + basePage.scale + ');left:' + newLeftPos + 'px;top:' + newTopPos + 'px;');
+    }
+    });
+</script>
+
 {% endblock content %}
